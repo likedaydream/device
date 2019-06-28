@@ -40,7 +40,7 @@
 
     <ul class="site-menu nav-columns">
       <li class="submenu-parent nav-col-1">
-        <a href="catalog.html">Каталог товаров</a>
+        <a class="submenu-dropdown-btn" href="catalog.html">Каталог товаров</a>
         <div class="submenu-dropdown">
           <ul class="submenu">
             <li><a href="#">Виртуальная реальность</a></li>
@@ -215,21 +215,21 @@
     <h2 class="visually-hidden">Услуги</h2>
     <div class="services-container container">
       <ul class="service-tabs">
-        <li class="service-tabs-active"><a class="button" href="#">Доставка</a></li>
-        <li><a class="button" href="#">Гарантия</a></li>
-        <li><a class="button" href="#">Кредит</a></li>
+        <li class="service-tabs-active"><a class="button" href="#tab-service-delivery">Доставка</a></li>
+        <li><a class="button" href="#tab-service-warranty">Гарантия</a></li>
+        <li><a class="button" href="#tab-service-credit">Кредит</a></li>
       </ul>
       <ul class="service-list">
-        <li class="service service-delivery service-active">
+        <li class="service service-delivery service-active" id="tab-service-delivery">
           <h3 class="service-title title">Доставка</h3>
           <div class="service-desc">Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</div>
         </li>
-        <li class="service service-warranty">
+        <li class="service service-warranty" id="tab-service-warranty">
           <h3 class="service-title title">Гарантия</h3>
           <div class="service-desc">Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>
           Товар, не дом, конечно же.</div>
         </li>
-        <li class="service service-credit">
+        <li class="service service-credit" id="tab-service-credit">
           <h3 class="service-title title">Кредит</h3>
           <div class="service-desc">Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</div>
         </li>
@@ -284,7 +284,7 @@
         <a class="map-link" href="#">
           <img src="img/map.jpg" width="560" height="222" alt="улица Строителей, 15">
         </a>
-        <a class="button block-button" href="#">Напишите нам</a>
+        <a class="button block-button js-write-link" href="#">Напишите нам</a>
       </section>
     </div>
   </div>
@@ -370,6 +370,8 @@
   </div>
   <button class="modal-close" type="button">Закрыть</button>
 </section>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

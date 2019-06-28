@@ -40,9 +40,9 @@ p {
   height: 1px !important;
   padding: 0 !important;
   margin: -1px !important;
-  overflow: hidden;
+  overflow: hidden !important;
 
-  border: 0;
+  border: 0 !important;
   clip: rect(0, 0, 0, 0);
   clip-path: inset(100%);
 }
@@ -361,7 +361,8 @@ p {
 .submenu {
   position: absolute;
   top: 100%;
-  left: -40px;
+  left: -60px;
+  z-index: 10;
 
   box-sizing: content-box;
   display: flex;
@@ -369,14 +370,15 @@ p {
   flex-direction: column;
   align-content: flex-start;
   width: 100%;
-  height: 110px;
-  padding: 20px 40px 30px;
+  height: 115px;
+  padding: 20px 60px 30px;
   margin: 0;
 
   font-weight: 300;
   font-size: 15px;
   line-height: 36px;
   font-family: 'Open Sans', Arial, sans-serif;
+  letter-spacing: 0.01em;
   text-transform: none;
 
   background-color: #f7e296;
@@ -396,6 +398,13 @@ p {
 
 .submenu > li:last-child {
   height: 100%;
+}
+
+.submenu-dropdown-btn:hover + .submenu-dropdown,
+.submenu-dropdown-btn:focus + .submenu-dropdown,
+.submenu-dropdown:hover,
+.submenu-show {
+  display: block;
 }
 
 .recommend {
