@@ -357,8 +357,6 @@ p {
 
 .submenu-dropdown {
   position: absolute;
-  /* fix for ie for :hover submenu */
-  top: calc(100% - 1px);
   left: -60px;
   z-index: 10;
 
@@ -405,9 +403,8 @@ p {
   height: 100%;
 }
 
-.submenu-dropdown-btn:hover + .submenu-dropdown,
+.submenu-parent:hover .submenu-dropdown,
 .submenu-dropdown-btn:focus + .submenu-dropdown,
-.submenu-dropdown:hover,
 .submenu-show {
   display: block;
 }
