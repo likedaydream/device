@@ -356,23 +356,29 @@ p {
 }
 
 .submenu-dropdown {
-  display: none;
-}
-
-.submenu {
   position: absolute;
-  top: 100%;
+  /* fix for ie for :hover submenu */
+  top: calc(100% - 1px);
   left: -60px;
   z-index: 10;
 
+  display: none;
   box-sizing: content-box;
+  width: 100%;
+  height: 115px;
+  padding: 20px 60px 30px;
+
+  background-color: #f7e296;
+}
+
+.submenu {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-content: flex-start;
-  width: 100%;
-  height: 115px;
-  padding: 20px 60px 30px;
+
+  height: 100%;
+  padding: 0;
   margin: 0;
 
   font-weight: 300;
@@ -381,8 +387,6 @@ p {
   font-family: 'Open Sans', Arial, sans-serif;
   letter-spacing: 0.01em;
   text-transform: none;
-
-  background-color: #f7e296;
 
   list-style: none;
 }
